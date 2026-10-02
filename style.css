@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #fce7f3);
+}
+
+.game-container {
+    width: 90%;
+    max-width: 430px;
+    padding: 30px 25px;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #0002;
+}
+
+h1 {
+    color: #5142bf;
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.scoreboard {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.score {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    color: #777;
+}
+
+.score strong {
+    font-size: 20px;
+    color: #222;
+}
+
+.score.active {
+    border-color: #6658d3;
+    background: #f4f2ff;
+}
+
+#status {
+    color: #444;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: auto auto 22px;
+    max-width: 340px;
+}
+
+.cell {
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 12px;
+    background: #f0f2fb;
+    color: #5142bf;
+    font-size: 55px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cell:hover:enabled {
+    background: #e2e4fa;
+}
+
+.cell.o {
+    color: #e66b91;
+}
+
+.cell:disabled {
+    cursor: default;
+}
+
+.cell.winner {
+    background: #d1fae5;
+    color: #15803d;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.actions button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #6658d3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    opacity: 0.85;
+}
+
+#reset {
+    background: #e9eaf2;
+    color: #333;
+}
+
+.footer {
+    color: #888;
+    font-size: 13px;
+    margin-top: 22px;
+}
